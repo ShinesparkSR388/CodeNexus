@@ -1,0 +1,83 @@
+//size
+.text-1{
+    font-size: smaller;
+}
+.text-2{
+    font-size: small;
+}
+.text-3{
+    font-size: medium;
+}
+.text-4{
+    font-size: large;
+}
+.text-5{
+    font-size: larger;
+}
+
+//grosor weigth
+
+.text-w-1{
+    font-weight: 100;
+}
+.text-w-2{
+    font-weight: 200;
+}
+.text-w-3{
+    font-weight: 300;
+}
+.text-w-4{
+    font-weight: 400;
+}
+.text-w-5{
+    font-weight: 500;
+}
+.text-w-6{
+    font-weight: 600;
+}
+.text-w-7{
+    font-weight: 700;
+}
+.text-w-8{
+    font-weight: 800;
+}
+
+//color
+.ligth{
+    color: $color-ligth;
+}
+.dark{
+    color: $color-dark;
+}
+.color-1{
+    color: $color-1;
+}
+.color-2{
+    color: $color-2;
+}
+.color-3{
+    color: $color-3;
+}
+.color-4{
+    color: $color-4;
+}
+//Text font
+body{
+    font-family: 'Century Gothic', 'Consolas', Calibri;
+    color: $color_text;
+    background-color: $color_background;
+}
+p, h1, h2, h3, h4, div, form, select, input, label, span, a{
+    color: $color_text;
+
+}
+//Text type
+.text-style-italic{
+    font-style: italic;
+}
+.text-style-oblique{
+    font-style: oblique;
+}
+.text-style-normal{
+    font-style: normal;
+}
