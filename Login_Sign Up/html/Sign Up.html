@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Diseño Sign Up</title>
+</head>
+<body>
+    <section>
+        <h2>Registro</h2>
+        <form id="signupForm">
+            <label>Nombre</label>
+            <input type="text" placeholder="..." id="name" required autofocus>
+            <label>Mail</label>
+            <input type="email" placeholder="..." id="email" required>
+            <label>Contraseña</label>
+            <input type="password" placeholder="..." id="password" required>
+            <input type="submit" value="Registro">
+            <!-- <button type="submit">Registrarse</button> -->
+        </form>
+        <div id="signupError" class="error-message"></div>
+        <p>Ya tienes una cuenta? <a href="../html/Login.html">Login</a></p>
+    </section>
+    <script src="../js/Sign_Up.js" type="module"></script>
+</body>
+</html>
