@@ -1,5 +1,13 @@
 import { validate_Username,validate_email,validate_password,show_error,hide_error } from "./Validation.js"
 
+const SESSION_ = JSON.parse(localStorage.getItem('SESSION')) || false;
+if(SESSION_['type'] == 'admin'){
+    window.location.href = '../html/admin/home_feed.html';
+}
+if(SESSION_['type'] == 'user'){
+  window.location.href = '../html/user/home_feed.html';
+}
+
 const signupForm = document.querySelector('#signupForm'); 
 
 //Evento para registrar usuario
@@ -26,15 +34,21 @@ signupForm.addEventListener('submit', (e)=>{
       show_error(document.getElementById("signupError"), "La contraseña debe tener al menos 8 caracteres, no debe contener espacios y debe incluir al menos un símbolo (+ * .)");
       return;
     }
-  
+    
+    var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let types = 'user';
+    if(usuarios == [] || usuarios.length == 0){
+      types = 'admin';
+    }
     // Registrar el nuevo usuario
-    var nuevoUsuario = {
-      username: username,
-      email: email,
-      password: password
+    const nuevoUsuario = {
+        id: uuid.v4(),
+        username: username,
+        email: email,
+        password: password,
+        type: types
     };
   
-    var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     usuarios.push(nuevoUsuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
   

@@ -32,13 +32,13 @@ function show_error(elemento, mensaje) {
   
   // Función para ocultar los mensajes de error
 function hide_error() {
-    const mensaje_login_error=document.getElementById("loginError");
-    if(mensaje_login_error != null){
-      mensaje_login_error.style.display = "none";
+    const menasaje_logineror=document.getElementById("loginError");
+    if(menasaje_logineror != null){
+      menasaje_logineror.style.display = "none";
     }
-    const mensaje_sign_up_error=document.getElementById("signupError");
-    if(mensaje_sign_up_error != null){
-      mensaje_sign_up_error.style.display = "none";
+    const mesnaje_signuperror=document.getElementById("signupError");
+    if(mesnaje_signuperror != null){
+      mesnaje_signuperror.style.display = "none";
     }
   }
 

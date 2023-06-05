@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
+            <div class="col-1 flex-container flex-justify-left">
+                <a href="home_feed.html" >Logo</a>
+            </div>
+            <div class="col-9 flex-container flex-justify-right">
+                <a href="home_feed.html">Inicio</a>
+                <a href="write_post.html" class="active">Redactar</a>
+                <a href="admin.html">Perfil</a>
+                <a href="admin.html">Ajustes</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8">
+            <form action="" class="margin-top-2">
+                <div class="form-title padding-1  rounded-2 ">
+                    <h3>Editar publicación</h3>
+                </div>
+                <div class="form-1">
+                    <label for="title">Titulo de la pubicació</label>
+                    <input type="text" title-post>
+                    <label for="content">Contenido</label>
+                    <textarea rows="1" cols="1" class="input-3" content-post></textarea>
+                    <button button-submit>Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="../../js/admin/write.js" type="module"></script>
+</body>
+</html>
