@@ -18,6 +18,19 @@ form{
     border-radius: 5px;
     color: $color-ligth;
  }
+ textarea{
+   height: 500px;
+   width: calc(100% - $Margins * 2);
+   border: 1px solid $color-1;
+   background-color: $color-2;
+   padding: auto;
+   margin: $Margins;
+   text-justify:distribute;
+   border-radius: 5px;
+   resize: vertical;
+   color: $color-ligth;
+   overflow: scroll;
+}
  .input-1{
     height: 30px;
  }
@@ -147,6 +160,29 @@ input[type="checkbox"]::before {
    background-color: $color-2;
  }
  button:active {
+   background-color: $color-1;
+ }
+ .button{
+   min-width: 100px;
+   height: 35px;
+   color: $color-ligth;
+   padding: 5px 10px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   outline: none;
+   border-radius: 5px;
+   border: none;
+   background: $color-3;
+ }
+ .button:hover {
+   background-color: $color-2;
+ }
+ .button:active {
    background-color: $color-1;
  }
  

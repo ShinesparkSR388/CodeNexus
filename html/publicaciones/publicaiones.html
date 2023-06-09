@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="toolbar">
+            <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
+                <div class="col-1 flex-container flex-justify-left">
+                    <a href="index.html" >Logo</a>
+                </div>
+                <div class="col-9 flex-container flex-justify-right">
+                    <a href="">Inicio</a>
+                    <a href="write_post.html" class="active">Redactar</a>
+                    <a href="admin.html">Perfil</a>
+                    <a href="admin.html">Ajustes</a>
+                </div>
+            </div>
+    </nav>
+
+    <div class="contenido">
+        <div class="col-3 flex-container flex-justify-right ">
+            <a href="">Publicaciones</a>
+            <a href="">Temas relacionados</a>
+        
+        </div>
+
+        <hr>
+        
+
+    </div>
+    
+        <div class="content">
+            <div class="publicacion bg-color-2">
+              <h1>Título de la Publicación</h1>
+              <p>Fecha de publicación</p>
+      
+              <h2>Contenido de la Publicación</h2>
+
+              <div class="acciones">
+                <a class="comentarios"  href="" ><i class="fa-regular fa-comments  " style="color: #000000;"></i>
+                    Comentarios
+                </a>
+                  <a class="compartir" href="#"><i class="fa-solid fa-share" style="color: #000000;"></i>
+                    Compartir
+                </a>
+                <div class="comentarios-container">
+                    <div class="comentarios-existing">
+                      <h3>Comentarios existentes:</h3>
+                      <ul class="comentarios-lista">
+                        <!-- Los comentarios se agregarán dinámicamente aquí -->
+                        
+                      </ul>
+                    </div>
+                    <div class="comentarios-nuevo">
+                    
+                      <form>
+                        <textarea class="comentario-input" placeholder="Escribe tu comentario"></textarea>
+                        <button type="submit">Comentar</button>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+              
+             
+            </div>
+    
+</body>
+<script src="publicaciones.js"></script>
+</html>
