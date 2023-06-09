@@ -62,6 +62,10 @@
   flex-direction: row;
 }
 
+.margin-0 {
+  margin: 0px;
+}
+
 .margin-1 {
   margin: 10px;
 }
@@ -260,6 +264,10 @@
 
 .margin-top-10 {
   margin-top: 100px;
+}
+
+.padding-0 {
+  padding: 0px;
 }
 
 .padding-1 {
@@ -1517,53 +1525,3 @@ p, h1, h2, h3, h4, div, form, select, input, label, span, a {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
-
-/* para lo de publicaiones  */
-
-.contenido{
-  margin-top: 50px;
-  width: auto;
-
-}
-.contenido a{
-
-  display: block;
-  color: #ffffff;
-  padding: 10px;
-  text-decoration: none;
-  float: right;
-
-}
-
-
-.toolbar {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #0A4D68;
-  position: relative;
-  height: auto;
-}
-
-.toolbar a {
-  display: block;
-  color: #ffffff;
-  padding: 10px;
-  text-decoration: none;
-  float: right;
-}
-
-
-.content{
-  flex-grow: 31;
-  
-}
-
-.acciones a{
-  padding: 10px;
-  text-decoration: none;
- 
-}
-
-

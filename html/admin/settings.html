@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
+            <div class="col-1 flex-container flex-justify-left">
+                <a href="home_feed.html" ><img src="../src/logo.png" alt="" class="margin-0 padding-0" style="width: 70px;"></a>
+            </div>
+            <div class="col-9 flex-container flex-justify-right">
+                <a href="home_feed.html">Inicio</a>
+                <a href="write_post.html">Redactar</a>
+                <a href="admin.html">Perfil</a>
+                <a href="settings.html" class="active">Administrar</a>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-4">
+        <div class="col-1"></div>
+        <div class="col-8">
+            <div class="row border rounded-1 bg-color-1">
+                <div class="col-1 bg-color-2 rounded-TopLeft-1 rounded-BottomLeft-1 flex-container flex-justify-center" users_>
+                    <h4 class=" margin-1">Usuarios</h4>
+                </div>
+                <div class="col-2  flex-container flex-justify-center flex-container flex-justify-center" posts_>
+                    <h4 class=" margin-1">Publicaciones</h4>
+                </div>
+                <div class="col-1 flex-container flex-justify-center flex-container flex-justify-center" block_>
+                    <h4 class=" margin-1">Bloqueos</h4>
+                </div>
+            </div>
+            <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-1" admin-users>
+                <div class="col">
+                    <p> parte para administrar los datos de la lista 'usuarios' y la lista 'blocked' en localStorage con la siguiente estructura: <br>
+                        email: "" <br>
+                        id: "" <br>
+                        password: "" <br>
+                        type: "" <br>
+                        username: "" <br>
+                    Crud completo para modificar o eliminar datos a excepción de el id el cual no debe cambiarse
+                    </p>
+                </div>
+            </div>
+            <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-1" admin-posts>
+                <div class="col">
+                    <p> parte para administrar los datos de la lista 'posts' en localStorage con la siguiente estructura: <br>
+                        content: "" <br>
+                        date: ""<br>
+                        id: ""<br>
+                        id_user: ""<br>
+                        title: ""<br>
+                        Crud completo para modificar datos (Solamente titulo y contenido), ademas la fecha se modificara automaticamente al hacer modificaciones;
+                    </p>
+                </div>
+            </div>
+            <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-1" admin-blocked>
+                <div class="col">
+                    <p> parte para agregar y eliminar usuarios de una lista 'blocked' en localStorage  con la siguiente estructura: <br>
+                        email: "" <br>
+                        id: "" <br>
+                        password: "" <br>
+                        type: "" <br>
+                        username: "" <br>
+                        En otras palabras se trasladara todo el usuario como tal de la lista 'usuarios' a la lista 'blocked'
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="../../js/admin/settings.js" type="module"></script>
+</body>
+</html>
