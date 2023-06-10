@@ -47,7 +47,8 @@ signupForm.addEventListener('submit', (e)=>{
         email: email,
         password: password,
         type: types,
-        state: true
+        state: true,
+        about: '(Contenido guardado)'
     };
   
     usuarios.push(nuevoUsuario);

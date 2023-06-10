@@ -5,6 +5,9 @@
 .bg-color-2 {
   background-color: #9DB2BF;
 }
+.display-none{
+  display: none;
+}
 
 .bg-color-3 {
   background-color: #526D82;

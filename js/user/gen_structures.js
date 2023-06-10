@@ -1,4 +1,4 @@
-import { change_state_user, get_state } from "./lock_unlock.js";
+import { get_state } from "./lock_unlock.js";
 
 function read_comments(id_post) {
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
@@ -41,60 +41,41 @@ function read_comments(id_post) {
         option_col.classList.add('col', 'flex-container', 'flex-justify-right', 'padding-right-1');
         
         //ELIMINAR COMENTARIO
-        const delete_ = document.createElement('a');
-        delete_.textContent = 'Eliminar';
-        delete_.classList.add('margin-left-1', 'text-1', 'color-3');
-        delete_.style.cursor = 'pointer';
-        
-        delete_.addEventListener('click', function(){
-            let new_list = [];
-            let ct = 0;
-            comments.forEach(item_ => {
-                if(item_['id'] == _['id']){
-                    delete(comments[ct]);
-                }
-                if(item_['id'] != _['id']){
-                    new_list.push(item_);
-                }
-                ct = ct + 1;
-            });
-            localStorage.setItem('comments', JSON.stringify(new_list));
-            row_1.style.display = 'none';
-            location.reload();
-        });
-
-        //SILENCIAR (JUNTO AL NOMBRE)
-
-        let block_ = document.createElement('a');
-        console.log(get_state(_['id_user']));
-        if(get_state(_['id_user']) == true){
-            block_.textContent = ' !Bloquear!';
-        }else{
-            block_.textContent = '(Bloqueado)';
-        }
-
-        block_.addEventListener('click', function(){
-            change_state_user(_['id_user']);
-            if(get_state(_['id_user']) == true){
-                block_.textContent = ' !Bloquear!';
-            }else{
-                block_.textContent = '(Bloqueado)';
-            }
-            location.reload();
-        });
-        block_.classList.add('margin-left-2', 'text-1', 'color-3', 'opacity-7', 'text-2', 'text-w-1');
-        block_.style.cursor = 'pointer';
-
-        option_col.appendChild(delete_);
-        row_options_.appendChild(option_col);
-        const name = document.createElement("h5");
-        name.classList.add('margin-0');
         let user_name = '';
         users_.forEach(__ => {
             if(_['id_user'] == __['id']){
                 user_name = __['username'];
             }
+            
         });
+        if((JSON.parse(localStorage.getItem('SESSION')))['id'] == _['id_user']){
+            user_name = user_name + '  (Tu)';
+            const delete_ = document.createElement('a');
+            delete_.textContent = 'Eliminar';
+            delete_.classList.add('margin-left-1', 'text-1', 'color-3');
+            delete_.style.cursor = 'pointer';
+            
+            delete_.addEventListener('click', function(){
+                let new_list = [];
+                let ct = 0;
+                unautorized_comments.forEach(item_ => {
+                    if(item_['id'] == _['id']){
+                        delete(unautorized_comments[ct]);
+                    }
+                    if(item_['id'] != _['id']){
+                        new_list.push(item_);
+                    }
+                    ct = ct + 1;
+                });
+                localStorage.setItem('unautorized_comments', JSON.stringify(new_list));
+                row_1.style.display = 'none';
+                location.reload();
+            });
+            option_col.appendChild(delete_);
+            row_options_.appendChild(option_col);
+        }
+        const name = document.createElement("h5");
+        name.classList.add('margin-0');
         name.textContent = user_name;
         const row_content = document.createElement("div");
         row_content.classList.add("row");
@@ -108,7 +89,6 @@ function read_comments(id_post) {
 
         row_content.appendChild(content);
         row_name.appendChild(name);
-        row_name.appendChild(block_);
         col_comment.appendChild(row_name);
         col_comment.appendChild(row_content);
         col_comment.appendChild(row_options_);
@@ -155,7 +135,7 @@ function read_unmoderated_comments(id_post) {
     unautorized_comments.forEach(_ => {
             const row_1 = document.createElement('div');
             let bl_1 = false;
-        if(_['id_post'] == id_post){
+        if(_['id_post'] == id_post && (JSON.parse(localStorage.getItem('SESSION')))['id'] == _['id_user']){
             bl_1 = true;
             //estructura de los contenedores
             row_1.classList.add("row");
@@ -187,86 +167,43 @@ function read_unmoderated_comments(id_post) {
             //3 options
             const option_col = document.createElement('div');
             option_col.classList.add('col', 'flex-container', 'flex-justify-right', 'padding-right-1');
-            //AUTORIZAR
-            const autorize = document.createElement('a');
-            autorize.textContent = 'Autorizar';
-            autorize.classList.add('margin-left-1', 'text-1', 'color-3');
-            autorize.style.cursor = 'pointer';
-            
-            autorize.addEventListener('click', function(){
-                let new_list = [];
-                comments.push(_);
-                let ct = 0;
-                unautorized_comments.forEach(item_ => {
-                    if(item_['id'] == _['id']){
-                        delete(unautorized_comments[ct]);
-                    }
-                    if(item_['id'] != _['id']){
-                        new_list.push(item_);
-                    }
-                    ct = ct + 1;
-                });
-                localStorage.setItem('unautorized_comments', JSON.stringify(new_list));
-                localStorage.setItem('comments', JSON.stringify(comments));
-                row_1.style.display = 'none';
-                location.reload();
-            });
             //ELIMINAR COMENTARIO
-            const delete_ = document.createElement('a');
-            delete_.textContent = 'Eliminar';
-            delete_.classList.add('margin-left-1', 'text-1', 'color-3');
-            delete_.style.cursor = 'pointer';
-            
-            delete_.addEventListener('click', function(){
-                let new_list = [];
-                let ct = 0;
-                unautorized_comments.forEach(item_ => {
-                    if(item_['id'] == _['id']){
-                        delete(unautorized_comments[ct]);
-                    }
-                    if(item_['id'] != _['id']){
-                        new_list.push(item_);
-                    }
-                    ct = ct + 1;
-                });
-                localStorage.setItem('unautorized_comments', JSON.stringify(new_list));
-                row_1.style.display = 'none';
-                location.reload();
-            });
-
-            //SILENCIAR (JUNTO AL NOMBRE)
-
-            let block_ = document.createElement('a');
-            console.log(get_state(_['id_user']));
-            if(get_state(_['id_user']) == true){
-                block_.textContent = ' !Bloquear!';
-            }else{
-                block_.textContent = '(Bloqueado)';
-            }
-
-            block_.addEventListener('click', function(){
-                change_state_user(_['id_user']);
-                if(get_state(_['id_user']) == true){
-                    block_.textContent = ' !Bloquear!';
-                }else{
-                    block_.textContent = '(Bloqueado)';
-                }
-                location.reload();
-            });
-            block_.classList.add('margin-left-2', 'text-1', 'color-3', 'opacity-7', 'text-2', 'text-w-1');
-            block_.style.cursor = 'pointer';
-
-            option_col.appendChild(autorize);
-            option_col.appendChild(delete_);
-            row_options_.appendChild(option_col);
-            const name = document.createElement("h5");
-            name.classList.add('margin-0');
             let user_name = '';
             users_.forEach(__ => {
                 if(_['id_user'] == __['id']){
                     user_name = __['username'];
                 }
+                
             });
+                user_name = user_name + '  (Tu)';
+                const delete_ = document.createElement('a');
+                delete_.textContent = 'Eliminar';
+                delete_.classList.add('margin-left-1', 'text-1', 'color-3');
+                delete_.style.cursor = 'pointer';
+                
+                delete_.addEventListener('click', function(){
+                    let new_list = [];
+                    let ct = 0;
+                    unautorized_comments.forEach(item_ => {
+                        if(item_['id'] == _['id']){
+                            delete(unautorized_comments[ct]);
+                        }
+                        if(item_['id'] != _['id']){
+                            new_list.push(item_);
+                        }
+                        ct = ct + 1;
+                    });
+                    localStorage.setItem('unautorized_comments', JSON.stringify(new_list));
+                    row_1.style.display = 'none';
+                    location.reload();
+                });
+                option_col.appendChild(delete_);
+                row_options_.appendChild(option_col);
+            
+            
+            const name = document.createElement("h5");
+            name.classList.add('margin-0');
+            
             name.textContent = user_name;
             const row_content = document.createElement("div");
             row_content.classList.add("row");
@@ -280,7 +217,6 @@ function read_unmoderated_comments(id_post) {
 
             row_content.appendChild(content);
             row_name.appendChild(name);
-            row_name.appendChild(block_);
             col_comment.appendChild(row_name);
             col_comment.appendChild(row_content);
             col_comment.appendChild(row_options_);
@@ -380,7 +316,7 @@ export function read_posts(query_){
         //Comentarios no moderados
         if(comments_to_autorize != ''){
             const h3_ = document.createElement('h4');
-            h3_.textContent = 'Comentarios no moderados';
+            h3_.textContent = 'Tus comentarios en espera...';
             h3_.classList.add('margin-0', 'padding-0', 'margin-top-1');
             const unmoderated = document.createElement('div');
             unmoderated.classList.add('border-top','row');

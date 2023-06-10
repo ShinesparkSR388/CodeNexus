@@ -5,10 +5,18 @@ export const admin_session = (e) => {
         localStorage.removeItem('SESSION');
         window.location.href = '../Login.html'
     }
-}
+};
 export const user_session = (e) => {
     if(SESSION_['type'] != 'user'){
         localStorage.removeItem('SESSION');
         window.location.href = '../Login.html'
     }
+};
+export function log_out(item){
+    const item_ = document.querySelector('[' + item + ']');
+    item_.addEventListener('click', function(){
+        localStorage.removeItem('SESSION');
+        window.location.href = '../../home.html';
+    });
+    item_.style.cursor = 'pointer';
 }
