@@ -17,7 +17,8 @@ export const create_post = (e) => {
         id: uuid.v4(),
         id_user: dt,
         title: title.value,
-        content: content.value
+        content: content.value,
+        date: moment().format('DD/MM/YYYY')
     }
 
     try{

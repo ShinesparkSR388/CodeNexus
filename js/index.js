@@ -7,7 +7,7 @@ if(SESSION_['type'] == 'user'){
   window.location.href = '../html/user/home_feed.html';
 }
 if(!user){
-    window.location.href = '../html/login.html'
+    window.location.href = './html/Login.html';
 }
 
 const logout = document.querySelector('#logout')

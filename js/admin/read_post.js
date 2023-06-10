@@ -1,6 +1,6 @@
-export const read_post = (e) => {
-    e.preventDefault();
+import { read_posts } from "./gen_structures.js";
+import { admin_session, log_out } from "../session.js";
 
-    const posts = document.querySelector('[posts-null]');
-
-} 
+admin_session();
+log_out('logout');
+read_posts('[posts-null]');

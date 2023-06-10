@@ -11,38 +11,32 @@
     <div class="toolbar">
         <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
             <div class="col-1 flex-container flex-justify-left">
-                <a href="home_feed.html" >Logo</a>
+                <a href="home_feed.html" ><img src="../src/logo.png" alt="" class="margin-0 padding-0" style="width: 70px;"></a>
             </div>
             <div class="col-9 flex-container flex-justify-right">
                 <a href="home_feed.html" class="active">Inicio</a>
                 <a href="write_post.html">Redactar</a>
                 <a href="admin.html">Perfil</a>
-                <a href="admin.html">Ajustes</a>
+                <a href="settings.html">Administrar</a>
+                <a logout>Cerrar Sesion</a>
             </div>
         </div>
     </div>
     <div class="row margin-top-4">
         <div class="col-1"></div>
         <div class="col-6 margin-right-2 ">
-            <div class="form-title rounded-2 opacity-7">
+            <div class="form-title rounded-2 opacity-8 margin-left-2 ">
                 <h2>Noticias</h2>
             </div>
+            
             <div posts-null>
-                <div class="row margin-2 bg-color-4">
-                    <div class="row bg-color-3">
-                        <div class="col">
-                            <h2>Titulo</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col form-text row margin-1 margin-left-2 margin-right-2">
-                            <p>Descripcion de todo el articulo</p>
-                        </div>
-                    </div>
-                </div>
+                <!--Lista de publicaciones generadas por el administrador-->
             </div>
         </div>
         <div class="col-2"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="../../js/admin/read_post.js" type="module"></script>
 </body>
 </html>
