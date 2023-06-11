@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin-right: 10px;
+}
+.form input{
+    width:auto ;
+    color: black;
+    font-size: 16px;
+}
+button {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid white;
+}
+th td button{
+    margin: 20px;
+    padding: 10px;
+}
+
+th {
+    background-color: #27374D;
+    border: 1px solid white;
+}
+
+button.delete {
+    background-color: #ff0000;
+}
+
+button.edit {
+    background-color: #2196f3;
+}
+tbody{
+    background-color:#27374D;
+    border: 1px solid white;
+}

@@ -42,11 +42,13 @@ signupForm.addEventListener('submit', (e)=>{
     }
     // Registrar el nuevo usuario
     const nuevoUsuario = {
-        id: uuid.v4(),
-        username: username,
-        email: email,
-        password: password,
-        type: types
+      id: uuid.v4(),
+      username: username,
+      email: email,
+      password: password,
+      type: types,
+      state: true,
+      about: '(Contenido guardado)'
     };
   
     usuarios.push(nuevoUsuario);

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/user.css">
     <title>Document</title>
 </head>
 <body>
@@ -38,14 +39,34 @@
             </div>
             <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-4" admin-users>
                 <div class="col">
-                    <p> parte para administrar los datos de la lista 'usuarios' y la lista 'blocked' en localStorage con la siguiente estructura: <br>
-                        email: "" <br>
-                        id: "" <br>
-                        password: "" <br>
-                        type: "" <br>
-                        username: "" <br>
-                    Crud completo para modificar o eliminar datos a excepción de el id el cual no debe cambiarse
-                    </p>
+                    <h1>Administrar Usuarios</h1>
+
+                    <form id="userForm" class="form">
+                        <input type="text" id="id" placeholder="ID" required>
+                        <input type="text" id="username" placeholder="Usuario" required>
+                        <input type="email" id="email" placeholder="Correo electrónico" required>
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                        <input type="text" id="type" placeholder="Tipo" required>
+                        <input type="text" id="state" placeholder="Estado" required>
+                        <input type="text" id="about" placeholder="Acerca de" required>
+                        <button type="submit">Guardar Usuario</button>
+                    </form>
+                
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Usuario</th>
+                                <th>Email</th>
+                                <th>Contraseña</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Acerca de</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
             </div>
             <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-4" admin-posts>
@@ -78,5 +99,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="../../js/admin/settings.js" type="module"></script>
+    <script src="../../js/admin/crud.js" type="module"></script>
 </body>
 </html>
