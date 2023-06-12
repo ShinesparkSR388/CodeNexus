@@ -1,5 +1,5 @@
 import { create_post } from "./write_post.js";
-import { admin_session, log_out } from "../session.js";
+import { admin_session, log_out } from "../login_sign_up/session.js";
 
 admin_session();
 log_out('logout');

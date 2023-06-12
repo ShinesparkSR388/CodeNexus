@@ -71,14 +71,47 @@
             </div>
             <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-4" admin-posts>
                 <div class="col">
-                    <p> parte para administrar los datos de la lista 'posts' en localStorage con la siguiente estructura: <br>
-                        content: "" <br>
-                        date: ""<br>
-                        id: ""<br>
-                        id_user: ""<br>
-                        title: ""<br>
-                        Crud completo para modificar datos (Solamente titulo y contenido), ademas la fecha se modificara automaticamente al hacer modificaciones;
-                    </p>
+                    <h3>Gestionar publicaciones</h3>
+                    <div class="row margin-left-1">
+                        <div class="col-4 bg-color-3 border" style=" overflow: scroll; height: 400px;" >
+                            <div class="row border">
+                                <div class="col-2" post-number>
+                                    <div class="row bg-color-3 border">
+                                        <div class="col">
+                                            <h4 class="margin-1">Nº</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8" post-title>
+                                    <div class="row bg-color-3 border">
+                                        <div class="col">
+                                            <h4 class="margin-1">Titulo</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <form action="" class="margin-top-2" style="display: none;" form-edit>
+                                <div class="form-title padding-1  rounded-2 ">
+                                    <h3>Editar publicación</h3>
+                                </div>
+                                <div class="form-1">
+                                    <input type="text" style="display: none;" id-post>
+                                    <label for="title">Titulo de la pubicació</label>
+                                    <input type="text" title-post>
+                                    <label for="content">Contenido</label>
+                                    <textarea rows="1" cols="1" class="input-3" content-post></textarea>
+                                    <button button-save>Guardar</button></div>
+                            </form>
+                            <div class="row flex-container flex-justify-left flex-align-down margin-left-1" style="height: 30%;">
+                                <div class="col-4  margin-bottom-2">
+                                    <button button-delete style="display: none;">Eliminar</button>
+                                    <button button-edit style="display: none;">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row border margin-top-1 rounded-1 padding-2 padding-top-1 padding-bottom-1 bg-color-4" admin-blocked>
