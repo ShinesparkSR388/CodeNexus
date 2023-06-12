@@ -7,3 +7,8 @@ function mostrar_menu(){
     document.getElementById("move-content").classList.toggle('move-container-all');
     document.getElementById("show-menu").classList.toggle('show-lateral');
 }
+const coma = document.querySelector('[reset]');
+coma.style.cursor = 'pointer';
+coma.addEventListener('click', function(){
+    localStorage.clear();
+});
