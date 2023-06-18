@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../css/home_feed.css">
+    <title>CodeNexus</title>
 </head>
 <body>
     <div class="toolbar">
-        <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
+        <!-- <div class="row flex-container flex-align-center margin-left-2 margin-right-2">
             <div class="col-1 flex-container flex-justify-left">
                 <a href="home_feed.html" ><img src="../src/logo.png" alt="" class="margin-0 padding-0" style="width: 70px;"></a>
             </div>
@@ -18,13 +22,27 @@
                 <a href="user.html">Perfil</a>
                 <a logout>Cerrar Sesion</a>
             </div>
+        </div> -->
+        <div class="header-content">
+            <div class="logo">
+                <h1><i class="ri-code-box-fill"></i>Code<b>Nexus</b></h1>
+            </div>
+            <div id="show-menu" class="menu">
+                <nav>
+                    <ul>
+                        <li><i class="fas fa-home"></i><a href="home_feed.html"class="active"> Home</a></li>
+                        <li><i class="ri-user-fill"></i><a href="user.html"> Profile</a></li>
+                        <li><i class="ri-logout-box-line"></i><a logout> Sign off</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
     <div class="row margin-top-4">
         <div class="col-1"></div>
         <div class="col-6 margin-right-2 ">
             <div class="form-title rounded-2 opacity-8 margin-left-2 ">
-                <h2>Noticias</h2>
+                <h2>News</h2>
             </div>
             
             <div posts-null>
@@ -33,6 +51,22 @@
         </div>
         <div class="col-2"></div>
     </div>
+    <!--Inicio de estructura para pie de pagina-->
+    <div class="container-footer" id="footer">	  
+        <footer>
+            <div class="logo-footer">
+                <h1><i class="ri-code-box-fill"></i>Code<b>Nexus</b></h1>
+            </div>
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="https://github.com/ShinesparkSR388/CodeNexus.git"><i class="fa-brands fa-github icon-redes-footer"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>© 2023 CodeNexus - All rights reserved</h4>
+        </footer>  
+    </div>
+    <!--Fin de estructura para pie de pagina-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js" integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="../../js/user/read_post.js" type="module"></script>
