@@ -2,10 +2,10 @@ import { validate_Username,validate_email,validate_password,show_error,hide_erro
 
 const SESSION_ = JSON.parse(localStorage.getItem('SESSION')) || false;
 if(SESSION_['type'] == 'admin'){
-    window.location.href = '../html/admin/home_feed.html';
+    window.location.href = './admin/home_feed.html';
 }
 if(SESSION_['type'] == 'user'){
-  window.location.href = '../html/user/home_feed.html';
+  window.location.href = './user/home_feed.html';
 }
 
 const loginForm = document.querySelector('#loginForm')

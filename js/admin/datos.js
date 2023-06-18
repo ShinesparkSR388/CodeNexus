@@ -23,7 +23,18 @@ if (usuarios && usuarios.length > 0) {
     btnCambiarEstado.textContent = usuario.state ? "Bloquear" : "Desbloquear";
     btnCambiarEstado.addEventListener("click", function () {
       // Cambiar el estado del usuario
-      usuario.state = !usuario.state;
+      let new_list = [];
+      usuarios.forEach(element => {
+          if(element.id == usuario.id){
+            if(element.state == true){
+              element.state = false;
+            }else{
+              element.state = true;
+            }
+          }
+          new_list.push(element);
+      });
+      localStorage.setItem('usuarios', JSON.stringify(new_list));
 
       // Actualizar el texto del botón
       btnCambiarEstado.textContent = usuario.state ? "Bloquear" : "Desbloquear";
