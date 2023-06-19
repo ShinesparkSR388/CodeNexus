@@ -237,6 +237,9 @@ article img{
     width: 100%;
     margin-top: 20px;
 }
+p{
+    text-align: justify;
+}
 /*Fin de estilos para el contenido del blog*/
 
 /*Inicio de los estilos para los articulos del blog*/

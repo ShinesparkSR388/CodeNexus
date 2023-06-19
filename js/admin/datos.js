@@ -20,7 +20,7 @@ if (usuarios && usuarios.length > 0) {
     celdaUsername.textContent = usuario.username;
     celdaEmail.textContent = usuario.email;
 
-    btnCambiarEstado.textContent = usuario.state ? "Bloquear" : "Desbloquear";
+    btnCambiarEstado.textContent = usuario.state ? "block" : "to unlock";
     btnCambiarEstado.addEventListener("click", function () {
       // Cambiar el estado del usuario
       let new_list = [];
@@ -37,7 +37,7 @@ if (usuarios && usuarios.length > 0) {
       localStorage.setItem('usuarios', JSON.stringify(new_list));
 
       // Actualizar el texto del botón
-      btnCambiarEstado.textContent = usuario.state ? "Bloquear" : "Desbloquear";
+      btnCambiarEstado.textContent = usuario.state ? "block" : "to unlock";
 
       // Mover la fila a la tabla correspondiente
       if (usuario.state) {

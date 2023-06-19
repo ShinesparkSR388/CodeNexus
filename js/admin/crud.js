@@ -70,7 +70,7 @@ function loadTable() {
 
         const actionsCell = document.createElement('td');
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Eliminar';
+        deleteButton.textContent = 'Delete';
         deleteButton.className = 'delete';
         deleteButton.addEventListener('click', () => {
             deleteUser(user.id);
@@ -79,7 +79,7 @@ function loadTable() {
         actionsCell.appendChild(deleteButton);
 
         const editButton = document.createElement('button');
-        editButton.textContent = 'Editar';
+        editButton.textContent = 'Edit';
         editButton.className = 'edit';
         editButton.addEventListener('click', () => {
             loadUserDataForEdit(user.id);
