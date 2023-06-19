@@ -1529,3 +1529,9 @@ p, h1, h2, h3, h4, div, form, select, input, label, span, a {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.objetfit-img-post{
+	width: 100%;
+	height: 170px;
+	object-fit: none;
+}

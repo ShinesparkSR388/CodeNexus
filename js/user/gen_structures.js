@@ -245,7 +245,7 @@ function comments_struct(post_, user_){
     col__.classList.add('col', 'flex-container', 'flex-justify-rigth', 'flex-align-center');
     const text_ = document.createElement('input');
     text_.setAttribute('type','text');
-    text_.classList.add('bg-color-1')
+    text_.classList.add('bg-color-1', 'color-4')
     const btn_sub = document.createElement('button');
     btn_sub.textContent = 'Comentar';
     btn_sub.addEventListener('click', function(){
@@ -274,7 +274,7 @@ export function read_posts(query_){
 
     posts.forEach(element_ => {
         const div_1 = document.createElement('div');
-        div_1.classList.add('row', 'margin-2', 'bg-color-4', 'rounded-2');
+        div_1.classList.add('row', 'margin-top-1', 'margin-bottom-1', 'bg-color-4', 'rounded-2');
         const col_ = document.createElement('div');
         col_.classList.add('col', 'border-bottom', 'margin-bottom-2');
         const centralRow_ = document.createElement('div');
@@ -294,19 +294,38 @@ export function read_posts(query_){
             }
         });
         const col_3 = document.createElement('div');
-        col_3.classList.add('col', 'form-text', 'row', 'margin-1', 'margin-left-2', 'margin-right-2', 'padding-left-2');
+        col_3.classList.add('col', 'form-text', 'margin-1', 'margin-left-2', 'margin-right-2', 'padding-left-2');
         const p_ = document.createElement('p');
         p_.textContent = element_['content'];
         
         const comments_to_do = read_comments(element_['id']);
         const comments_to_autorize = read_unmoderated_comments(element_['id']);
-        
+        //Imagen
+            const img_post = new Image();
+            img_post.src = element_['img_post'];
+            img_post.classList.add('objetfit-img-post', 'rounded-3');
+            const row_img = document.createElement('div');
+            row_img.classList.add('row');
+            const row_text = document.createElement('div');
+            row_text.classList.add('row');
+            const col_img = document.createElement('div');
+            col_img.classList.add('col');
+            const col_text = document.createElement('div');
+            col_text.classList.add('col');
+            col_img.appendChild(img_post);
+            col_text.appendChild(p_);
+
+            row_img.appendChild(col_img);
+            row_text.appendChild(col_text);
+        //
+
         innerCol_.appendChild(h2_);
         centralRow_.appendChild(innerCol_);
         col_.appendChild(centralRow_);
         col_.appendChild(row_);
-        col_3.appendChild(p_);
+        col_3.appendChild(row_img);
         row_.appendChild(h4_);
+        col_3.appendChild(row_text);
         row_.appendChild(col_3);
         div_1.appendChild(col_);
         posts_.appendChild(div_1);
